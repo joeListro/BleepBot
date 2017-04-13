@@ -39,7 +39,12 @@
     </ResourceCompile>
   </ItemGroup>
   <ItemGroup>
-    <Media Include="..\..\..\..\Downloads\LeroyJenkins\LeroyJenkins.wav">
+    <None Include="wav1.bin">
+      <Filter>Resource Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Media Include="..\Resources\LeroyJenkins.wav">
       <Filter>Resource Files</Filter>
     </Media>
   </ItemGroup>
