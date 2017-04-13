@@ -8,21 +8,11 @@
 **********************************************************************/
 
 #include <iostream>
-#include <stdlib.h>
 #include <string>
-#include <array>
 #include <Windows.h>
-#include "resource.h"
-#include "resource1.h"
-<<<<<<< HEAD
-#include "file_IO.cpp"
 #include <fstream>
 #include <streambuf>
-
-#define NUM_BAD_WORDS = 15
-=======
-#include "source.cpp"
->>>>>>> origin/master
+#include "resource1.h"
 
 using namespace std;
 

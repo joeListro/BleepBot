@@ -139,6 +139,10 @@
     <Media Include="..\..\..\..\Downloads\LeroyJenkins\LeroyJenkins.wav" />
     <Media Include="..\..\..\smallLoan.wav" />
   </ItemGroup>
+  <ItemGroup>
+    <Text Include="..\Resources\badWordsDictionary.txt" />
+    <Text Include="..\Resources\testInput.txt" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
