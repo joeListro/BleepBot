@@ -41,13 +41,20 @@ void menu()
 	if (input == 'b' || input == 'B')
 	{
 		system("cls");
-		//bleepBot();
+		
+		//string badWords = fileInput();
+		//cout << convertBadWords(badWords);
+
+		system("pause");
 		menu();
 	}
 	else if (input == 'T' || input == 't')
 	{
 		system("cls");
-		//trumpMode();
+		//string trumpWords = fileInput();
+		//cout << convertTrumpWords(trumpWords);
+
+		system("pause");
 		menu();
 	}
 	else if (input == 'L' || input == 'l')
