@@ -15,6 +15,8 @@
 #include "resource.h"
 #include "resource1.h"
 #include "file_IO.cpp"
+#include <fstream>
+#include <streambuf>
 
 #define NUM_BAD_WORDS = 15
 
@@ -32,6 +34,21 @@ class BleepBot {
 		// Load in bad words and good words here.
 
 		return;
+	}
+
+	string fileInput(string filename) {
+
+		ifstream t(filename);
+		string str;
+
+		t.seekg(0, std::ios::end);
+		str.reserve(t.tellg());
+		t.seekg(0, std::ios::beg);
+
+		str.assign((std::istreambuf_iterator<char>(t)), std::istreambuf_iterator<char>());
+
+		return str;
+
 	}
 
 	string convertBadWords(string filename) {

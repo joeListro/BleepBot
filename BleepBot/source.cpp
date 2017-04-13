@@ -13,11 +13,11 @@
 #include <Windows.h>
 #include "resource.h"
 #include "resource1.h"
-
+#include "BleepBot.cpp"
 
 using namespace std;
 
-void leeroy()
+/*void leeroy()
 {
 	string input;
 
@@ -28,10 +28,12 @@ void leeroy()
 		PlaySound((char*)IDR_WAVE1, NULL, SND_RESOURCE | SND_ASYNC);
 
 	system("pause");
-}
+}*/
 
 void menu()
 {
+	BleepBot bleep = BleepBot();
+
 	system("cls");
 
 	char input;
@@ -42,8 +44,8 @@ void menu()
 	{
 		system("cls");
 		
-		//string badWords = fileInput();
-		//cout << convertBadWords(badWords);
+		//string badWords = bleep.fileInput();
+		//cout << bleep.convertBadWords(badWords);
 
 		system("pause");
 		menu();
@@ -51,8 +53,8 @@ void menu()
 	else if (input == 'T' || input == 't')
 	{
 		system("cls");
-		//string trumpWords = fileInput();
-		//cout << convertTrumpWords(trumpWords);
+		//string trumpWords = bleep.fileInput();
+		//cout << bleep.convertTrumpWords(trumpWords);
 
 		system("pause");
 		menu();
@@ -60,7 +62,7 @@ void menu()
 	else if (input == 'L' || input == 'l')
 	{
 		system("cls");
-		leeroy();
+		bleep.leeroy();
 		menu();
 	}
 	else if (input == 'E' || input == 'e')

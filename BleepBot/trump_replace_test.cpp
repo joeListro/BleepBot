@@ -9,11 +9,14 @@
 
 #include "gtest/gtest.h"
 #include <string>
+#include "BleepBot.cpp"
 
 using namespace std;
 
 TEST()
 {
+	BleepBot bleep = BleepBot();
+
 	string trumpWords = "insert Trump words here";
 	string expected = "insert here";
 	string actual = convertTrumpWords(trumpWords);

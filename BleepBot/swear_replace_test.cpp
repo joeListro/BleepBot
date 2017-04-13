@@ -9,6 +9,7 @@
 
 #include "gtest/gtest.h"
 #include <string>
+#include "BleepBot.cpp"
 
 using namespace std;
 
@@ -16,7 +17,7 @@ TEST()
 {
 	string badWords = "insert bad words here";
 	string expected = "insert here";
-	BleepBot bleep = new BleepBot();
+	BleepBot bleep = BleepBot();
 	string actual = bleep.convertBadWords(badWords);
 
 	EXPECT_EQ(actual, expected);

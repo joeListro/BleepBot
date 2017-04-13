@@ -8,6 +8,7 @@
 **********************************************************************/
 
 #include "gtest/gtest.h"
+#include "BleepBot.cpp"
 #include <string>
 
 using namespace std;
@@ -25,8 +26,8 @@ TEST(file_read_write_test, write_test) {
 
 TEST()
 {
-	string filename = "test.txt";
+	BleepBot bleep = BleepBot();
 	string expected = "...";
-	string actual = fileInput(filename);
+	string actual = bleep.fileInput("test.txt");
 	EXPECT_EQ(actual, expected);
 }
