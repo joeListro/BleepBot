@@ -16,7 +16,6 @@
 #include "BleepBot.cpp"
 
 using namespace std;
-
 void menu()
 {
 	BleepBot bleep = BleepBot();
@@ -30,11 +29,10 @@ void menu()
 	if (input == 'b' || input == 'B')
 	{
 		system("cls");
-		
+
 		string badWords = bleep.fileInput("testInput.txt");
 		bleep.loadDictionary("badWordsDictionary.txt");
 		cout << bleep.convertBadWords(badWords);
-
 		system("pause");
 		menu();
 	}
@@ -42,6 +40,7 @@ void menu()
 	{
 		system("cls");
 		PlaySound((char*)IDR_WAVE2, NULL, SND_RESOURCE | SND_ASYNC);
+
 		string trumpWords = bleep.fileInput("testInput.txt");
 		bleep.loadDictionary("trumpDictionary.txt");
 		cout << bleep.convertBadWords(trumpWords);

@@ -55,4 +55,12 @@
       <Filter>Resource Files</Filter>
     </Media>
   </ItemGroup>
+  <ItemGroup>
+    <Text Include="..\Resources\badWordsDictionary.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="..\Resources\testInput.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+  </ItemGroup>
 </Project>

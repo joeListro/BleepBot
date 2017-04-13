@@ -8,14 +8,13 @@
 **********************************************************************/
 
 #include <iostream>
-#include <stdlib.h>
 #include <string>
 #include <Windows.h>
-#include "resource.h"
-#include "resource1.h"
-#include <fstream>
+#include "resource1.h"#include <fstream>
 #include <streambuf>
+#include "source.cpp"
 
+#define NUM_BAD_WORDS = 15\
 using namespace std;
 
 class BleepBot {
