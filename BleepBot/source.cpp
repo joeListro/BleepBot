@@ -17,19 +17,6 @@
 
 using namespace std;
 
-void leeroy()
-{
-	string input;
-
-	cout << "Leeroy\n";
-	cin >> input;
-
-	if (input == "Jenkins" || input == "jenkins")
-		PlaySound((char*)IDR_WAVE1, NULL, SND_RESOURCE | SND_ASYNC);
-
-	system("pause");
-}
-
 void menu()
 {
 	system("cls");
