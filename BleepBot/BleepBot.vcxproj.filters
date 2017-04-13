@@ -21,20 +21,20 @@
     <ClCompile Include="source.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="file_read_write_test.cpp">
+      <Filter>Test Files</Filter>
+    </ClCompile>
     <ClCompile Include="swear_replace_test.cpp">
       <Filter>Test Files</Filter>
     </ClCompile>
     <ClCompile Include="trump_replace_test.cpp">
       <Filter>Test Files</Filter>
     </ClCompile>
-    <ClCompile Include="file_read_test.cpp">
-      <Filter>Test Files</Filter>
+    <ClCompile Include="BleepBot.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="sound_test.cpp">
       <Filter>Test Files</Filter>
-    </ClCompile>
-    <ClCompile Include="BleepBot.cpp">
-      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -52,9 +52,6 @@
   </ItemGroup>
   <ItemGroup>
     <Media Include="..\..\..\..\Downloads\LeroyJenkins\LeroyJenkins.wav">
-      <Filter>Resource Files</Filter>
-    </Media>
-    <Media Include="..\..\..\smallLoan.wav">
       <Filter>Resource Files</Filter>
     </Media>
   </ItemGroup>

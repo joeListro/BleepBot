@@ -14,15 +14,7 @@
 #include <Windows.h>
 #include "resource.h"
 #include "resource1.h"
-<<<<<<< HEAD
-#include "file_IO.cpp"
-#include <fstream>
-#include <streambuf>
-
-#define NUM_BAD_WORDS = 15
-=======
 #include "source.cpp"
->>>>>>> origin/master
 
 using namespace std;
 
