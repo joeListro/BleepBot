@@ -1,5 +1,5 @@
 /* ***  Author:  Joe Listro and Sam Poquette
-*  Last Update:  April 11, 2017
+*  Last Update:  April 13, 2017
 *     Filename:  source.cpp
 *  Description:  Accepts input in the form of a text file and replaces any ‘bad’ words then saves to a file and outputs the result to a console.
 *
