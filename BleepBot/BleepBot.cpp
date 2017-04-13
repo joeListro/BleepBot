@@ -14,24 +14,67 @@
 #include <Windows.h>
 #include "resource.h"
 #include "resource1.h"
+<<<<<<< HEAD
 #include "file_IO.cpp"
 #include <fstream>
 #include <streambuf>
 
 #define NUM_BAD_WORDS = 15
+=======
+#include "source.cpp"
+>>>>>>> origin/master
 
 using namespace std;
 
 class BleepBot {
 
-	string badWords [25];
+	static const int NUM_BAD_WORDS = 15;
 
-	string goodWords [25];
+	string badWords [NUM_BAD_WORDS];
+
+	string goodWords [NUM_BAD_WORDS];
+
+	BleepBot() {
+		// Default constructor.
+	}
 
   public:
 
-	BleepBot() {
+	BleepBot(string pathToDictionary) {
 		// Load in bad words and good words here.
+		// Reads the format : 
+		//		badWord - goodWord\n
+		// Supports dictionaries with up to NUM_BAD_WORDS (= 15).
+		string dictionary = fileInput(pathToDictionary);
+
+		string curWord;
+
+		bool goodWord = false;
+
+		int numBadWords = 0, numGoodWords = 0;
+
+		for (char& c : dictionary) {
+			if (c != (' ' | '-' | '\n')) {
+				curWord += c;
+			} else {
+				// After loading a complete word, save it in the appropriate array.
+				if (goodWord) {
+					goodWords[numGoodWords] = curWord;
+					numGoodWords++;
+					// After loading a good word, the next word will be a bad word.
+					goodWord = false;
+				} else {
+					badWords[numBadWords] = curWord;
+					numBadWords++;
+					// After loading a bad word, the next word will be a good word.
+					goodWord = true;
+				}
+				// After saving the curWord in badWords or goodWords, clear curWord
+				curWord = "";
+			}
+			if (numGoodWords == 15)
+				break;
+		}
 
 		return;
 	}
@@ -53,15 +96,19 @@ class BleepBot {
 
 	string convertBadWords(string filename) {
 
-		string text;
+		string text = fileInput(filename);
 
-		file_IO fileIO = file_IO();
+		for (int index = 0; index < NUM_BAD_WORDS; index++) {
+			// search for instances of badWords[index]
+			while(text.find(badWords[index]) != string::npos) {
+				// replace bad words
+				size_t posToReplace = text.find(badWords[index]);
 
-		text = fileIO.read(filename);
-
-		while () {
-			// replace bad words
+				text.replace(posToReplace, badWords[index].length(), goodWords[index]);
+			}
 		}
+
+		return text;
 	}
 
 	void leeroy()
