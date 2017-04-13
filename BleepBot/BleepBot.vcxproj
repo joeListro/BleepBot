@@ -123,6 +123,7 @@
     <ClCompile Include="file_read_write_test.cpp" />
     <ClCompile Include="source.cpp" />
     <ClCompile Include="swear_replace_test.cpp" />
+    <ClCompile Include="trump_replace_test.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="resource.h" />

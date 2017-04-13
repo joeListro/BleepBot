@@ -19,3 +19,8 @@ TEST(file_read_write_test, write_test) {
 	fileIO.write("Test Text in test.txt");
 	EXPECT_EQ("Test Text in test.txt" fileIO.read("test.txt"));
 }
+
+TEST()
+{
+
+}

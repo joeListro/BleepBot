@@ -27,6 +27,9 @@
     <ClCompile Include="swear_replace_test.cpp">
       <Filter>Test Files</Filter>
     </ClCompile>
+    <ClCompile Include="trump_replace_test.cpp">
+      <Filter>Test Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="resource.h">
