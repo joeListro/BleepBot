@@ -77,15 +77,6 @@ void menu()
 	}
 }
 
-string fileInput(string pathToFile) {
-	
-	string theText;
-
-	// Read in pathToFile
-
-	return theText;
-}
-
 int main()
 {
 	menu();
