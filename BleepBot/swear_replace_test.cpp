@@ -13,7 +13,7 @@
 
 using namespace std;
 
-TEST()
+/*TEST()
 {
 	string badWords = "insert bad words here";
 	string expected = "insert here";
@@ -22,4 +22,4 @@ TEST()
 
 	EXPECT_EQ(actual, expected);
 
-}
+}*/

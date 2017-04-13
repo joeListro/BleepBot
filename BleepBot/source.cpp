@@ -53,6 +53,7 @@ void menu()
 	else if (input == 'T' || input == 't')
 	{
 		system("cls");
+		PlaySound((char*)IDR_WAVE2, NULL, SND_RESOURCE | SND_ASYNC);
 		//string trumpWords = bleep.fileInput();
 		//cout << bleep.convertTrumpWords(trumpWords);
 

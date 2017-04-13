@@ -24,10 +24,10 @@ TEST(file_read_write_test, write_test) {
 	EXPECT_EQ("Test Text in test.txt" fileIO.read("test.txt"));
 }*/
 
-TEST()
+/*TEST()
 {
 	BleepBot bleep = BleepBot();
 	string expected = "...";
 	string actual = bleep.fileInput("test.txt");
 	EXPECT_EQ(actual, expected);
-}
+}*/

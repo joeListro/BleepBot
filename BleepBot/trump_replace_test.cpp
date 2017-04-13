@@ -13,7 +13,7 @@
 
 using namespace std;
 
-TEST()
+/*TEST()
 {
 	BleepBot bleep = BleepBot();
 
@@ -23,4 +23,4 @@ TEST()
 
 	EXPECT_EQ(actual, expected);
 
-}
+}*/

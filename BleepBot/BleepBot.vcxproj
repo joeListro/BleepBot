@@ -78,6 +78,7 @@
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>winmm.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -120,7 +121,9 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="file_read_write_test.cpp" />
+    <ClCompile Include="BleepBot.cpp" />
+    <ClCompile Include="file_read_test.cpp" />
+    <ClCompile Include="sound_test.cpp" />
     <ClCompile Include="source.cpp" />
     <ClCompile Include="swear_replace_test.cpp" />
     <ClCompile Include="trump_replace_test.cpp" />
@@ -134,6 +137,7 @@
   </ItemGroup>
   <ItemGroup>
     <Media Include="..\..\..\..\Downloads\LeroyJenkins\LeroyJenkins.wav" />
+    <Media Include="..\..\..\smallLoan.wav" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
