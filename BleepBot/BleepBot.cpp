@@ -14,6 +14,7 @@
 #include <Windows.h>
 #include "resource.h"
 #include "resource1.h"
+#include "file_IO.cpp"
 
 #define NUM_BAD_WORDS = 15
 
@@ -33,21 +34,17 @@ class BleepBot {
 		return;
 	}
 
-	void censorconvertBadWords(string filename) {
+	string convertBadWords(string filename) {
 
 		string text;
 
-		file_IO fileIO = new file_IO();
+		file_IO fileIO = file_IO();
 
 		text = fileIO.read(filename);
 
-		while (!eof) {
+		while () {
 			// replace bad words
 		}
-
-		string fileOutput = filename + "_output.txt";
-
-		fileIO.write(fileOutput, text);
 	}
 
 	void leeroy()

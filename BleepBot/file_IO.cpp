@@ -25,7 +25,7 @@ public:
 		//Default constructor
 	}
 
-	string readFile(string pathToFile) {
+	string read(string pathToFile) {
 
 		// Read in pathToFile to theString
 
