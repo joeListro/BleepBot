@@ -7,14 +7,14 @@
 *     I certify that this assignment is entirely my own work.
 **********************************************************************/
 
+
 #include <iostream>
 #include <string>
 #include <Windows.h>
-#include "resource1.h"#include <fstream>
+#include "resource1.h"
+#include <fstream>
 #include <streambuf>
-#include "source.cpp"
 
-#define NUM_BAD_WORDS = 15\
 using namespace std;
 
 class BleepBot {

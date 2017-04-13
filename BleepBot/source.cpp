@@ -10,12 +10,11 @@
 #include <iostream>
 #include <stdlib.h>
 #include <string>
-#include <Windows.h>
-#include "resource.h"
 #include "resource1.h"
 #include "BleepBot.cpp"
 
 using namespace std;
+
 void menu()
 {
 	BleepBot bleep = BleepBot();
