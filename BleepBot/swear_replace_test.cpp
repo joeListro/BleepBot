@@ -16,7 +16,7 @@ TEST()
 {
 	string badWords = "insert bad words here";
 	string expected = "insert here";
-	string actual = convertBadWords(theString);
+	string actual = convertBadWords(badWords);
 
 	EXPECT_EQ(actual, expected);
 

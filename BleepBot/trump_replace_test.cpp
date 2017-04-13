@@ -14,9 +14,9 @@ using namespace std;
 
 TEST()
 {
-	string badWords = "insert bad words here";
+	string trumpWords = "insert Trump words here";
 	string expected = "insert here";
-	string actual = convertTrumpWords(theString);
+	string actual = convertTrumpWords(trumpWords);
 
 	EXPECT_EQ(actual, expected);
 
