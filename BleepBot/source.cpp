@@ -17,19 +17,6 @@
 
 using namespace std;
 
-/*void leeroy()
-{
-	string input;
-
-	cout << "Leeroy\n";
-	cin >> input;
-
-	if (input == "Jenkins" || input == "jenkins")
-		PlaySound((char*)IDR_WAVE1, NULL, SND_RESOURCE | SND_ASYNC);
-
-	system("pause");
-}*/
-
 void menu()
 {
 	BleepBot bleep = BleepBot();
@@ -44,8 +31,9 @@ void menu()
 	{
 		system("cls");
 		
-		//string badWords = bleep.fileInput();
-		//cout << bleep.convertBadWords(badWords);
+		string badWords = bleep.fileInput("testInput.txt");
+		bleep.loadDictionary("badWordsDictionary.txt");
+		cout << bleep.convertBadWords(badWords);
 
 		system("pause");
 		menu();
@@ -54,8 +42,9 @@ void menu()
 	{
 		system("cls");
 		PlaySound((char*)IDR_WAVE2, NULL, SND_RESOURCE | SND_ASYNC);
-		//string trumpWords = bleep.fileInput();
-		//cout << bleep.convertTrumpWords(trumpWords);
+		string trumpWords = bleep.fileInput("testInput.txt");
+		bleep.loadDictionary("trumpDictionary.txt");
+		cout << bleep.convertBadWords(trumpWords);
 
 		system("pause");
 		menu();

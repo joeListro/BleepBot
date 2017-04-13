@@ -10,11 +10,11 @@
 #include <iostream>
 #include <stdlib.h>
 #include <string>
-#include <array>
 #include <Windows.h>
 #include "resource.h"
 #include "resource1.h"
-#include "source.cpp"
+#include <fstream>
+#include <streambuf>
 
 using namespace std;
 
@@ -26,13 +26,13 @@ class BleepBot {
 
 	string goodWords [NUM_BAD_WORDS];
 
+  public:
+
 	BleepBot() {
 		// Default constructor.
 	}
 
-  public:
-
-	BleepBot(string pathToDictionary) {
+	void loadDictionary(string pathToDictionary) {
 		// Load in bad words and good words here.
 		// Reads the format : 
 		//		badWord - goodWord\n
