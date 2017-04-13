@@ -25,11 +25,15 @@ class BleepBot {
 
 	string goodWords [25];
 
+  public:
+
 	BleepBot() {
 		// Load in bad words and good words here.
+
+		return;
 	}
 
-	void bleep(string filename) {
+	void censorconvertBadWords(string filename) {
 
 		string text;
 

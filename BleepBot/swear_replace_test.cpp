@@ -16,7 +16,8 @@ TEST()
 {
 	string badWords = "insert bad words here";
 	string expected = "insert here";
-	string actual = convertBadWords(badWords);
+	BleepBot bleep = new BleepBot();
+	string actual = bleep.convertBadWords(badWords);
 
 	EXPECT_EQ(actual, expected);
 

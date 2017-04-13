@@ -8,6 +8,7 @@
 **********************************************************************/
 
 #include "gtest/gtest.h"
+#include "BleepBot.cpp"
 
 TEST(leeroy_sound_test, sound_test) {
 	BleepBot bleep = BleepBot();
