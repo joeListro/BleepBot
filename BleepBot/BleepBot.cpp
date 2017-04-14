@@ -9,9 +9,9 @@
 
 
 #include <iostream>
-#include <string>
 #include <Windows.h>
 #include "resource1.h"
+#include <string>
 #include <fstream>
 #include <streambuf>
 #include <sstream>
@@ -39,33 +39,40 @@ class BleepBot {
 		// Supports dictionaries with up to NUM_BAD_WORDS (= 15).
 		string dictionary = fileInput(pathToDictionary);
 
+		cout << "Dictionary : \n" << dictionary << endl;
+
 		string curWord;
 
 		bool goodWord = false;
+		bool endOfWord = false;
 
 		int numBadWords = 0, numGoodWords = 0;
 
 		for (char& c : dictionary) {
-			if (c != (' ' | '-' | '\n')) {
-				curWord += c;
-			} else {
-				// After loading a complete word, save it in the appropriate array.
-				if (goodWord) {
-					goodWords[numGoodWords] = curWord;
-					numGoodWords++;
-					// After loading a good word, the next word will be a bad word.
-					goodWord = false;
-				} else {
-					badWords[numBadWords] = curWord;
-					numBadWords++;
-					// After loading a bad word, the next word will be a good word.
-					goodWord = true;
+			if (c ==  '-' || c == '\n') {
+				if (!endOfWord) {
+					cout << " Bad Word Read : " << curWord << endl;
+					// After loading a complete word, save it in the appropriate array.
+					if (goodWord) {
+						goodWords[numGoodWords] = curWord;
+						numGoodWords++;
+						// After loading a good word, the next word will be a bad word.
+						goodWord = false;
+					}
+					else {
+						badWords[numBadWords] = curWord;
+						numBadWords++;
+						// After loading a bad word, the next word will be a good word.
+						goodWord = true;
+					}
+					// After saving the curWord in badWords or goodWords, clear curWord and set the endOfWord flag.
+					curWord = "";
+					endOfWord = true;
 				}
-				// After saving the curWord in badWords or goodWords, clear curWord
-				curWord = "";
+			} else {
+				endOfWord = false;
+				curWord += c;
 			}
-			if (numGoodWords == 15)
-				break;
 		}
 
 		for (int i = 0; i < 15; i++) {
@@ -97,11 +104,17 @@ class BleepBot {
 		for (int index = 0; index < NUM_BAD_WORDS; index+=1) {
 
 			// search for instances of badWords[index]
-			while(text.find(badWords[index]) != string::npos) {
+			bool instancesRemaining = true;
+			while(instancesRemaining) {
 				// replace bad words
 				size_t posToReplace = text.find(badWords[index]);
 
-				text.replace(posToReplace, badWords[index].length(), goodWords[index]);
+				if (posToReplace == string::npos) {
+					instancesRemaining = false;
+				} else {
+
+					text.replace(posToReplace, badWords[index].length(), goodWords[index]);
+				} 
 			}
 		}
 

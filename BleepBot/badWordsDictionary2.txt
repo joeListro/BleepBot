@@ -1,15 +1,15 @@
-ass - bass
-bastard - mustard
-bitch - twitch
-cock - sock
-cunt - clown
-dick - duck
-fuck - flick
-motherfucker - McDouble with cheese
-penis - popsicle
-piss - urine
-pussy - feline
-shit - shoe
-suck - sauce
-sucker - saucer
-twat - Twitter
+ass-bass
+bastard-mustard
+bitch-twitch
+cock-sock
+cunt-clown
+dick-duck
+fuck-flick
+motherfucker-McDouble with cheese
+penis-popsicle
+piss-urine
+pussy-feline
+shit-shoe
+suck-sauce
+sucker-saucer
+twat-Twitter
