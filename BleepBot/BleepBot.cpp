@@ -121,8 +121,10 @@ class BleepBot {
 		cin >> input;
 
 		if (input == "Jenkins" || input == "jenkins")
+		{
+			cout << "\n\nLEEERROOOOOOOOY JEEEEEEEENKINSSSS!!!!!!\n\n";
 			PlaySound((char*)IDR_WAVE1, NULL, SND_RESOURCE | SND_ASYNC);
-
+		}
 		system("pause");
 	}
 };
