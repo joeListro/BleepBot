@@ -29,8 +29,10 @@ void menu()
 	{
 		system("cls");
 
-		string badWords = bleep.fileInput("testInput.txt");
-		bleep.loadDictionary("badWordsDictionary.txt");
+		string badWords = bleep.fileInput("testInput3.txt");
+		cout << badWords << "\n\n";
+		bleep.loadDictionary("badWordsDictionary2.txt");
+		cout << "checkpoint\n\n";
 		cout << bleep.convertBadWords(badWords);
 		system("pause");
 		menu();
@@ -40,9 +42,9 @@ void menu()
 		system("cls");
 		PlaySound((char*)IDR_WAVE2, NULL, SND_RESOURCE | SND_ASYNC);
 
-		string trumpWords = bleep.fileInput("testInput.txt");
-		bleep.loadDictionary("trumpDictionary.txt");
-		cout << bleep.convertBadWords(trumpWords);
+		//string trumpWords = bleep.fileInput("testInput.txt");
+		//bleep.loadDictionary("trumpDictionary.txt");
+		//cout << bleep.convertBadWords(trumpWords);
 
 		system("pause");
 		menu();

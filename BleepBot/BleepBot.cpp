@@ -14,6 +14,7 @@
 #include "resource1.h"
 #include <fstream>
 #include <streambuf>
+#include <sstream>
 
 using namespace std;
 
@@ -72,14 +73,12 @@ class BleepBot {
 
 	string fileInput(string filename) {
 
-		ifstream t(filename);
-		string str;
+		ifstream inFile;
+		inFile.open(filename);//open the input file
 
-		t.seekg(0, std::ios::end);
-		str.reserve(t.tellg());
-		t.seekg(0, std::ios::beg);
-
-		str.assign((std::istreambuf_iterator<char>(t)), std::istreambuf_iterator<char>());
+		stringstream strStream;
+		strStream << inFile.rdbuf();//read the file
+		string str = strStream.str();//str holds the content of the file
 
 		return str;
 
@@ -89,7 +88,8 @@ class BleepBot {
 
 		string text = fileInput(filename);
 
-		for (int index = 0; index < NUM_BAD_WORDS; index++) {
+		for (int index = 0; index < NUM_BAD_WORDS; index+=1) {
+
 			// search for instances of badWords[index]
 			while(text.find(badWords[index]) != string::npos) {
 				// replace bad words
