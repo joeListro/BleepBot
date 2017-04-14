@@ -12,6 +12,5 @@
 
 /*TEST(leeroy_sound_test, sound_test) {
 	BleepBot bleep = BleepBot();
-	bleep.leeroy();
-	EXPECT_NO_FATAL_FAILURE();
+	EXPECT_NO_FATAL_FAILURE(bleep.leeroy());
 }*/

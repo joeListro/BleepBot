@@ -12,7 +12,7 @@
 #include <string>
 #include "resource1.h"
 #include "BleepBot.cpp"
-
+#include "gtest\gtest.h"
 using namespace std;
 
 void menu()
@@ -66,5 +66,7 @@ void menu()
 
 int main()
 {
-	menu();
+	::testing::InitGoogleTest();
+	return RUN_ALL_TESTS()
+	//menu();
 }
