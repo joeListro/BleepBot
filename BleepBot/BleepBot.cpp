@@ -68,10 +68,16 @@ class BleepBot {
 				break;
 		}
 
+		for (int i = 0; i < 15; i++) {
+			cout << "Bad Word " << i << " : " << badWords[i] << endl;
+		}
+
 		return;
 	}
 
 	string fileInput(string filename) {
+
+		cout << "File Input Called" << endl;
 
 		ifstream inFile;
 		inFile.open(filename);//open the input file
@@ -84,9 +90,9 @@ class BleepBot {
 
 	}
 
-	string convertBadWords(string filename) {
+	string convertBadWords(string text) {
 
-		string text = fileInput(filename);
+		cout << "text : \n" << text << endl;
 
 		for (int index = 0; index < NUM_BAD_WORDS; index+=1) {
 
