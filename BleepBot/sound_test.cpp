@@ -7,10 +7,10 @@
 *     I certify that this assignment is entirely my own work.
 **********************************************************************/
 
-#include "gtest/gtest.h"
+/*#include "gtest/gtest.h"
 #include "BleepBot.cpp"
 
-/*TEST(leeroy_sound_test, sound_test) {
+TEST(leeroy_sound_test, sound_test) {
 	BleepBot bleep = BleepBot();
 	EXPECT_NO_FATAL_FAILURE(bleep.leeroy());
 }*/

@@ -12,7 +12,6 @@
 #include <string>
 #include "resource1.h"
 #include "BleepBot.cpp"
-#include "gtest\gtest.h"
 
 using namespace std;
 
@@ -44,9 +43,9 @@ void menu()
 		system("cls");
 		PlaySound((char*)IDR_WAVE2, NULL, SND_RESOURCE | SND_ASYNC);
 
-		//string trumpWords = bleep.fileInput("testInput.txt");
-		//bleep.loadDictionary("trumpDictionary.txt");
-		//cout << bleep.convertBadWords(trumpWords);
+		string trumpWords = bleep.fileInput("testInput.txt");
+		bleep.loadDictionary("trumpDictionary.txt");
+		cout << bleep.convertBadWords(trumpWords);
 
 		system("pause");
 		menu();

@@ -7,13 +7,13 @@
 *     I certify that this assignment is entirely my own work.
 **********************************************************************/
 
-#include "gtest/gtest.h"
+/*#include "gtest/gtest.h"
 #include <string>
 #include "BleepBot.cpp"
 
 using namespace std;
 
-/*TEST()
+TEST()
 {
 	BleepBot bleep = BleepBot();
 
