@@ -35,11 +35,11 @@ class BleepBot {
 	void loadDictionary(string pathToDictionary) {
 		// Load in bad words and good words here.
 		// Reads the format : 
-		//		badWord - goodWord\n
+		//		badWord-goodWord\n
 		// Supports dictionaries with up to NUM_BAD_WORDS (= 15).
 		string dictionary = fileInput(pathToDictionary);
 
-		cout << "Dictionary : \n" << dictionary << endl;
+		cout << "Dictionary : \n" << dictionary << "\n-------------------------" << endl;
 
 		string curWord;
 
@@ -51,7 +51,6 @@ class BleepBot {
 		for (char& c : dictionary) {
 			if (c ==  '-' || c == '\n') {
 				if (!endOfWord) {
-					cout << " Bad Word Read : " << curWord << endl;
 					// After loading a complete word, save it in the appropriate array.
 					if (goodWord) {
 						goodWords[numGoodWords] = curWord;
@@ -75,16 +74,10 @@ class BleepBot {
 			}
 		}
 
-		for (int i = 0; i < 15; i++) {
-			cout << "Bad Word " << i << " : " << badWords[i] << endl;
-		}
-
 		return;
 	}
 
 	string fileInput(string filename) {
-
-		cout << "File Input Called" << endl;
 
 		ifstream inFile;
 		inFile.open(filename);//open the input file
@@ -99,22 +92,21 @@ class BleepBot {
 
 	string convertBadWords(string text) {
 
-		cout << "text : \n" << text << endl;
-
 		for (int index = 0; index < NUM_BAD_WORDS; index+=1) {
 
 			// search for instances of badWords[index]
 			bool instancesRemaining = true;
 			while(instancesRemaining) {
 				// replace bad words
+
 				size_t posToReplace = text.find(badWords[index]);
 
-				if (posToReplace == string::npos) {
+				if (posToReplace >= text.length() || posToReplace == string::npos) {
 					instancesRemaining = false;
 				} else {
 
 					text.replace(posToReplace, badWords[index].length(), goodWords[index]);
-				} 
+				}
 			}
 		}
 
