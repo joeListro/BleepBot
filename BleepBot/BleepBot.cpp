@@ -98,7 +98,6 @@ class BleepBot {
 			bool instancesRemaining = true;
 			while(instancesRemaining) {
 				// replace bad words
-
 				size_t posToReplace = text.find(badWords[index]);
 
 				if (posToReplace >= text.length() || posToReplace == string::npos) {

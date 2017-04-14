@@ -28,10 +28,14 @@ void menu()
 	if (input == 'b' || input == 'B')
 	{
 		system("cls");
+		string filename;
 
-		string badWords = bleep.fileInput("testInput3.txt");
+		cout << "Please enter filename:\n";
+		cin >> filename;
+
+		string badWords = bleep.fileInput(filename);
 		bleep.loadDictionary("badWordsDictionary2.txt");
-		cout << "Before : \n" << badWords << "\n----------------------\n\n";
+		cout << "\nBefore : \n" << badWords << "\n----------------------\n\n";
 		cout << "After : \n";
 		cout << bleep.convertBadWords(badWords);
 		cout << "\n----------------------\n\n";
@@ -43,9 +47,20 @@ void menu()
 		system("cls");
 		PlaySound((char*)IDR_WAVE2, NULL, SND_RESOURCE | SND_ASYNC);
 
-		string trumpWords = bleep.fileInput("testInput.txt");
 		bleep.loadDictionary("trumpDictionary.txt");
+
+		string filename;
+
+		cout << "Please enter filename:\n";
+		cin >> filename;
+
+		string trumpWords = bleep.fileInput(filename);
+
+		cout << "\nBefore : \n" << trumpWords << "\n----------------------\n\n";
+		cout << "After : \n";
+
 		cout << bleep.convertBadWords(trumpWords);
+		cout << "\n----------------------\n\n";
 
 		system("pause");
 		menu();

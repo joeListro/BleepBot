@@ -65,5 +65,11 @@
     <Text Include="badWordsDictionary2.txt">
       <Filter>Source Files</Filter>
     </Text>
+    <Text Include="trumpDictionary.txt">
+      <Filter>Source Files</Filter>
+    </Text>
+    <Text Include="testInput4.txt">
+      <Filter>Source Files</Filter>
+    </Text>
   </ItemGroup>
 </Project>
