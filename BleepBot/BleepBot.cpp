@@ -39,7 +39,7 @@ class BleepBot {
 		// Supports dictionaries with up to NUM_BAD_WORDS (= 15).
 		string dictionary = fileInput(pathToDictionary);
 
-		cout << "Dictionary : \n" << dictionary << "\n-------------------------" << endl;
+		//cout << "Dictionary : \n" << dictionary << "\n-------------------------" << endl;
 
 		string curWord;
 

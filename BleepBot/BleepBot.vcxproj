@@ -74,7 +74,7 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>C:\Users\Samuel\Downloads\googletest-master\googletest-master\googletest\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\joseph.listro\Desktop\googletest\googletest\include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>

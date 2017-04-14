@@ -32,10 +32,10 @@ void menu()
 
 		string badWords = bleep.fileInput("testInput3.txt");
 		bleep.loadDictionary("badWordsDictionary2.txt");
-		cout << "Before : \n" << badWords << "\n----------------------" << endl;
+		cout << "Before : \n" << badWords << "\n----------------------\n\n";
 		cout << "After : \n";
 		cout << bleep.convertBadWords(badWords);
-		cout << "\n----------------------" << endl;
+		cout << "\n----------------------\n\n";
 		system("pause");
 		menu();
 	}
